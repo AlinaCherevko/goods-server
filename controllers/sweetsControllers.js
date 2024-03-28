@@ -11,4 +11,11 @@ export const getAllSweets = controllersWrapper(async (req, res, next) => {
   res.json(result);
 });
 
-export const getOneSweet = (req, res) => {};
+export const getOneSweet = controllersWrapper(async (req, res) => {
+  const { id } = req.params;
+  const result = await Sweet.findById(id);
+  if (!result) {
+    throw HttpError(404);
+  }
+  res.json(result);
+});

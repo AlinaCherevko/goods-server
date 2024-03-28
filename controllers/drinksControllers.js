@@ -10,4 +10,11 @@ export const getAllDrinks = controllersWrapper(async (req, res, next) => {
   res.json(result);
 });
 
-export const getOneDrink = (req, res) => {};
+export const getOneDrink = controllersWrapper(async (req, res, next) => {
+  const { id } = req.params;
+  const result = await Drink.findById(id);
+  if (!result) {
+    throw HttpError(404);
+  }
+  res.json(result);
+});
