@@ -6,7 +6,7 @@ const mealSchema = new Schema(
       type: String,
     },
     price: {
-      type: Number,
+      type: String,
     },
   },
   { versionKey: false, timestamps: true }
