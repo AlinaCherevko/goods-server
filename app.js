@@ -19,6 +19,7 @@ app.use(express.json());
 app.use("/meal", mealRouter);
 app.use("/drinks", drinksRouter);
 app.use("/sweets", sweetsRouter);
+app.use("/orders", ordersRouter);
 
 app.use((_, res) => {
   res.status(404).json({ message: "Route not found" });
