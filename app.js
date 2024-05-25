@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import mealRouter from "./routes/mealRouter.js";
 import drinksRouter from "./routes/drinksRouter.js";
 import sweetsRouter from "./routes/sweetsRouter.js";
+import ordersRouter from "./routes/ordersRouter.js";
 
 const app = express();
 

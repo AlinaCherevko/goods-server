@@ -8,3 +8,5 @@ const ordersRouter = express.Router();
 
 ordersRouter.post("/", validateBody(ordersSchema), postOrder);
 ordersRouter.get("/:id", isValidId);
+
+export default ordersRouter;
