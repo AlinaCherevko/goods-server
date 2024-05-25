@@ -1,6 +1,6 @@
 import express from "express";
-import { ordersSchema } from "../joiSchemas/joiOrdersSchemas";
-import { postOrder } from "../controllers/ordersControllers";
+import { ordersSchema } from "../joi/joiOrdersSchemas.js";
+import { postOrder } from "../controllers/ordersControllers.js";
 import { isValidId } from "../middlewares/isValidId.js";
 import validateBody from "../helpers/validateBody.js";
 

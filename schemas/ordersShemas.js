@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-const ordersSchema = new Shema({
+const ordersSchema = new Schema({
   items: {
     type: Array,
   },
